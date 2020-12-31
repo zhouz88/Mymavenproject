@@ -12,7 +12,7 @@ public class Solution {
 
     public static void main(String[] args) {
         BasicConfigurator.configure();
-        logger.info("hello sb");
+        logger.info("https://dillinger.io/ is a good place for readme");
         System.getProperty("user.dir");
         System.out.println(System.getenv("HOME"));
         Injector i = Guice.createInjector(new TodModule());
