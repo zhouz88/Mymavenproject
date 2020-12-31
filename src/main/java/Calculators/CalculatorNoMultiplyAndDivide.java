@@ -4,7 +4,7 @@ import Calculators.Exceptions.CalculateExeption;
 
 import java.util.Stack;
 
-public class CalculatorNoMultiplyAndDivide extends Calculator {
+public class CalculatorNoMultiplyAndDivide implements Calculator {
     public int calculate(String s) {
         try {
             Stack<Object> stack = new Stack<Object>();
