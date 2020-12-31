@@ -9,12 +9,12 @@ import lombok.Data;
 public class Calulators {
     @Inject
     @NoParenthesis
-    Calculator noParenthesisCalculator;
+    CalculatorNoParanthesis noParenthesisCalculator;
 
     @Inject
     @NoMultiplyAndDivide
-    Calculator noMultiplyAndDivideCalculator;
+    CalculatorNoMultiplyAndDivide noMultiplyAndDivideCalculator;
 
     @Inject
-    Calculator generalCalculator;
+    CalculatorGeneral generalCalculator;
 }

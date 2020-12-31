@@ -1,5 +1,5 @@
 package Calculators;
 
-public interface Calculator {
-    int calculate(String s);
+public abstract class Calculator {
+    public abstract int calculate(String s);
 }

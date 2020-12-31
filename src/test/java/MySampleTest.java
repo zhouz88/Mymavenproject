@@ -1,18 +1,34 @@
-import org.junit.Assert;
+import Calculators.*;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
-import java.util.Random;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class MySampleTest {
+    @Rule
+    public MockitoRule rule = MockitoJUnit.rule();
+
+    @Mock
+    private CalculatorNoMultiplyAndDivide calculator1;
+    @Mock
+    private CalculatorNoParanthesis calculator2;
+    @Mock
+    private CalculatorGeneral calculator3;
+    @InjectMocks
+    private Calulators cals;
 
     @Test
     public void test() {
-        Random mockRandom = mock(Random.class);
-        when(mockRandom.nextInt()).thenReturn(100);  // 指定调用 nextInt 方法时，永远返回 100
+        //MockitoAnnotations.initMocks(this);
+        when(cals.getGeneralCalculator().calculate(anyString())).thenReturn(122);
 
-        Assert.assertEquals(100, mockRandom.nextInt());
-        Assert.assertEquals(100, mockRandom.nextInt());
+        assertEquals(cals.getGeneralCalculator().calculate("1+3"), 122);
     }
 }
