@@ -27,7 +27,7 @@ public class Solution {
         s.usvow();
         Calulators cals = i.getInstance(Calulators.class);
         runCalProxy(cals.getNoMultiplyAndDivideCalculator());
-        System.out.println("Let's calculate, input a formula");
+        System.out.println("Input a formula to start the simulation");
         while (true) {
             Scanner scanner = new Scanner(System.in);
             String next = scanner.nextLine();
@@ -52,7 +52,7 @@ public class Solution {
     private static Calculator Generate(Calculator cal) {
         InvocationHandler handler = new InvocationHandler() {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                System.out.println("Too hard for me, hope to make more money :) 8888888");
+                System.out.println("Too hard for me 8888888");
                 return 888888888;
             }
         };
